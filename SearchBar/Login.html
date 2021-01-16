@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Apna Library | Login Page </title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+<!-- : Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+
+<script >
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC4PcV4eSr_k2LdMttzlIPd6gCx0DDt-e4",
+    authDomain: "kldfdkdk.firebaseapp.com",
+    databaseURL: "https://kldfdkdk-default-rtdb.firebaseio.com",
+    projectId: "kldfdkdk",
+    storageBucket: "kldfdkdk.appspot.com",
+    messagingSenderId: "242849363318",
+    appId: "1:242849363318:web:56c2f5eebbfa561b11f657",
+    measurementId: "G-T6X95D8LVW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+ 
+ 
+   var gmail= document.getElementByid("email").value;
+   var username= document.getElementByid("user").value;
+  var password= document.getElementByid("password").value;
+  
+  var database = firebase.database();
+   var submit= document.getElementByid("submit").value;
+
+
+submit.addEventListener('click',(e) => {
+  
+
+       e.preventDefault(); 
+database.ref('/users/' + username.value).set({gmail: gmail,password: password,username: username});
+
+});
+
+ document.getElementByid("l")innerHTML="sign up successfully...!";
+
+
+
+</script>
+<body>
+    <div class="login-form">
+        <form class action="login.html" method="post">
+            <h1>Log In</h1>
+            <input type="text" placeholder="User Name" class="txtb" id="user">
+            <input type="email" placeholder="Email" class="txtb" id="email">
+            <input type="password" placeholder="Password" class="txtb" id="password">
+            <input type="submit"  value="Create Account" class="crt-btn" id="submit">
+            <p id="l"> </p>
+            <a href="#">Already Have one ?</a>
+        </form>
+    </div>
+    
+</body>
+</html>
