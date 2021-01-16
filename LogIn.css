@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_library_bacteria.png");
+}
+
+.login-form {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: url("https://www.gannett-cdn.com/-mm-/e1d78d18d18c0e71d5c7c4a0350b598687f50fe1/c=0-50-534-352/local/-/media/2015/04/08/Phoenix/Phoenix/635641084520049957-635639312779369759-library.jpg?width=534&height=302&fit=crop&format=pjpg&auto=webp");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.login-form h1 {
+    margin-top: 100px;
+    font-family: 'Permanent Marker', cursive;
+    color: #fff;
+    font-size: 40px;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: "montserrat", sans-serif;
+}
+
+.txtb {
+    margin: 20px 0;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 6px;
+}
+
+.crt-btn {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    background: #487eb0;
+    color: #fff;
+    border-radius: 44px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.crt-btn:hover {
+    transform: scale(0.96);
+}
+
+.login-form a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    transition: 0.8s;
+    display: block;
+}
+
+.login-form a:hover {
+    background: rgba(0, 0, 0, .3);
+}
